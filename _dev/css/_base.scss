@@ -22,7 +22,7 @@ h5 {
 br {
     display: block;
     margin: 5px 0;
- }
+}
 
 a {
     text-decoration: none;
@@ -31,7 +31,7 @@ a {
 
 td,
 th {
-    border: 1px solid black;
+    border: 1px solid $gray;
 }
 
 table {
@@ -52,16 +52,24 @@ caption {
 }
 
 .container {
-    .head {
-        height: 105px
-    }
     margin: 60px auto;
     max-width: 826px;
     border: 1px solid#fff;
     position: relative;
+    .mobile {
+        @include media-query($on-palm) {
+            border: 1px solid $gray;
+            margin: 15px;
+            position: relative;
+        }
+    }
     @include media-query($on-laptop) {
-
         margin: 0px auto;
+    }
+    @include media-query($on-palm) {
+        margin: 0px auto;
+        max-width: 420px;
+        padding-bottom: 0px;
     }
     &:after {
         content: "";
@@ -83,6 +91,9 @@ caption {
         @include media-query($on-palm) {
             display: none;
         }
+    }
+    .head {
+        height: 105px
     }
     h2,
     h1 {
@@ -151,7 +162,7 @@ caption {
         &>div.other {
             float: left;
             width: 100%;
-            margin-bottom: 60px;            
+            margin-bottom: 60px;
             @include media-query($on-palm) {
                 margin-bottom: 30px;
             }
@@ -207,16 +218,10 @@ caption {
             border: none;
         }
         img {
-            float: right;
             border: 5px solid $green;
             @include media-query($on-laptop) {
                 height: 120px;
             }
         }
-    }
-    @include media-query($on-palm) {
-        margin: 0px auto;
-        max-width: 420px;
-        padding-bottom: 0px;
     }
 }
