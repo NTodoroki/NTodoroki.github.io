@@ -66,9 +66,6 @@ caption {
     @include media-query($on-palm) {
         border: 1px solid $gray;
     }
-    @include media-query($on-small) {
-        min-width: 380px;
-    }
     &:after {
         content: "";
         display: table;
