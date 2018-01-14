@@ -57,8 +57,12 @@ caption {
     border: 1px solid#fff;
     position: relative;
     .mobile {
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
         @include media-query($on-palm) {
-            float: left;
             border: 1px solid $gray;
             margin: 15px;
             position: relative;
@@ -69,7 +73,7 @@ caption {
     }
     @include media-query($on-palm) {
         margin: 0px auto;
-        max-width: 360px;
+        max-width: 420px;
         padding-bottom: 0px;
     }
     &:after {
@@ -160,12 +164,17 @@ caption {
                 }
             }
         }
-        &>div.other {
-            float: left;
-            width: 100%;
-            margin-bottom: 60px;
-            @include media-query($on-palm) {
-                margin-bottom: 30px;
+        &>div {
+            &.studies {
+                margin-bottom: 30px !important;
+            }
+            &.other {
+                float: left;
+                width: 100%;
+                margin-bottom: 45px;
+                @include media-query($on-palm) {
+                    margin-bottom: 30px;
+                }
             }
         }
         p:nth-child(even),
