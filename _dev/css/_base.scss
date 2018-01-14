@@ -215,7 +215,7 @@ caption {
         }
     }
     @include media-query($on-palm) {
-        margin: 10px auto;
+        margin: 0px auto;
         max-width: 420px;
         padding-bottom: 0px;
     }
