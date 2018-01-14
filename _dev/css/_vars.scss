@@ -1,0 +1,15 @@
+$white: #fff;
+$green: #99cc00;
+$letter_green: #92d050;
+$gray: #d5d5d5;
+
+$on-small: '(max-width: 420px)';
+$on-palm: '(max-width: 720px)';
+$on-laptop:'(max-width: 826px)';
+$on-desktop:'(max-width: 1400px)';
+
+@mixin media-query($device) {
+    @media #{$device} {
+        @content;
+    }
+}

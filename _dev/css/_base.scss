@@ -1,0 +1,228 @@
+html,
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    color: #000;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: $letter_green;
+}
+
+br {
+    display: block;
+    margin: 5px 0;
+ }
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+td,
+th {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    display: table-cell;
+    * {
+        font-weight: 200;
+    }
+    @include media-query($on-palm) {
+        margin-top: 15px;
+        padding: 0px !important;
+    }
+}
+
+caption {
+    background-color: #ccc;
+}
+
+.container {
+    .head {
+        height: 105px
+    }
+    margin: 60px auto;
+    max-width: 826px;
+    border: 1px solid#fff;
+    position: relative;
+    @include media-query($on-laptop) {
+
+        margin: 0px auto;
+    }
+    @include media-query($on-palm) {
+        border: 1px solid $gray;
+    }
+    @include media-query($on-small) {
+        width: 420px;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &:before {
+        content: " ";
+        position: absolute;
+        right: 5px;
+        height: 100%;
+        top: 0px;
+        bottom: 0px;
+        left: 31%;
+        border-left: .5px solid $gray;
+        @include media-query($on-laptop) {
+            left: 35%;
+        }
+        @include media-query($on-palm) {
+            display: none;
+        }
+    }
+    h2,
+    h1 {
+        width: 30%;
+        text-align: right;
+        padding-right: 15px;
+        @include media-query($on-laptop) {
+            width: 35%;
+            padding: 0px 15px;
+        }
+        @include media-query($on-palm) {
+            width: 100%;
+            text-align: left;
+        }
+    }
+    .panel {
+        padding: 15px;
+        @include media-query($on-palm) {
+            border-top: 1px solid $gray;
+        }
+        float: left;
+        width: 100%;
+        p {
+            letter-spacing: 1px;
+            margin: 0px 0px 10px 0px;
+            float: left;
+            word-spacing: 2px;
+            line-height: 1.2em;
+            &.date {
+                @include media-query($on-palm) {
+                    color: $letter_green;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+        &.personal {
+            &>p:nth-child(even) {
+                width: 30%;
+                text-align: right;
+                padding-right: 15px;
+                font-weight: 400;
+                @include media-query($on-laptop) {
+                    width: 35%;
+                }
+                @include media-query($on-palm) {
+                    width: 45%;
+                    padding-left: 0px;
+                }
+            }
+            &>p:nth-child(odd) {
+                width: 40%;
+                text-align: left;
+                padding-left: 20px;
+                font-weight: 200;
+                clear: none;
+                @include media-query($on-laptop) {
+                    width: 65%;
+                    font-size: 1em;
+                }
+                @include media-query($on-palm) {
+                    width: 55%;
+                    text-align: left;
+                }
+            }
+        }
+        &>div.other {
+            float: left;
+            width: 100%;
+            margin-bottom: 60px;            
+            @include media-query($on-palm) {
+                margin-bottom: 30px;
+            }
+        }
+        p:nth-child(even),
+        table {
+            width: 70%;
+            text-align: left;
+            padding-left: 20px;
+            font-weight: 200;
+            @include media-query($on-laptop) {
+                width: 65%;
+            }
+            @include media-query($on-palm) {
+                width: 100%;
+                text-align: left;
+            }
+        }
+        p:nth-child(odd) {
+            width: 30%;
+            text-align: right;
+            padding-right: 15px;
+            font-weight: 200;
+            clear: both;
+            &.title {
+                color: $letter_green;
+                font-size: 20px;
+                font-weight: 400;
+                margin: 0px;
+                @include media-query($on-laptop) {
+                    margin-bottom: 30px;
+                }
+            }
+            @include media-query($on-laptop) {
+                width: 35%;
+                font-size: .8em;
+                word-spacing: 0p;
+                letter-spacing: 0px;
+            }
+            @include media-query($on-palm) {
+                font-size: 1em;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+    .profile {
+        float: right;
+        @include media-query($on-laptop) {
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            border: none;
+        }
+        img {
+            width: 100%;
+            float: right;
+            border: 5px solid $green;
+            @include media-query($on-laptop) {
+                height: 120px;
+            }
+        }
+    }
+    @include media-query($on-palm) {
+        margin: 10px 10px;
+        padding-bottom: 0px;
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "cv_naomi",
+  "version": "1.0.0",
+  "description": "Curriculum",
+  "main": "index.js",
+  "scripts": {
+    "start": "taskr"
+  },
+  "author": "nao",
+  "license": "ISC",
+  "devDependencies": {
+    "@taskr/browserify": "^1.1.0",
+    "@taskr/clear": "^1.1.0",
+    "@taskr/esnext": "^1.1.0",
+    "@taskr/postcss": "^1.1.2",
+    "@taskr/sass": "^1.1.0",
+    "@taskr/watch": "^1.1.0",
+    "browser-sync": "^2.18.13",
+    "connect-history-api-fallback": "^1.3.0",
+    "cssnano": "^3.10.0",
+    "taskr": "^1.1.0",
+    "taskr-autoprefixer": "^1.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}
