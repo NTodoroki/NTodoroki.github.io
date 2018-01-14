@@ -67,7 +67,7 @@ caption {
         border: 1px solid $gray;
     }
     @include media-query($on-small) {
-        width: 420px;
+        min-width: 380px;
     }
     &:after {
         content: "";
@@ -213,7 +213,6 @@ caption {
             border: none;
         }
         img {
-            width: 100%;
             float: right;
             border: 5px solid $green;
             @include media-query($on-laptop) {
