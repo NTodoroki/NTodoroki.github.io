@@ -64,8 +64,7 @@ caption {
         }
         @include media-query($on-palm) {
             border: 1px solid $gray;
-            margin: 15px;
-            position: relative;
+            margin: 3px;
         }
     }
     @include media-query($on-laptop) {
@@ -187,7 +186,7 @@ caption {
                 width: 65%;
             }
             @include media-query($on-palm) {
-                width: 100%;
+                width: inherit;
                 text-align: left;
             }
         }
