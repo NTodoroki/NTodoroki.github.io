@@ -58,6 +58,7 @@ caption {
     position: relative;
     .mobile {
         @include media-query($on-palm) {
+            float: left;
             border: 1px solid $gray;
             margin: 15px;
             position: relative;
@@ -139,8 +140,9 @@ caption {
                     width: 35%;
                 }
                 @include media-query($on-palm) {
-                    width: 45%;
+                    width: 100%;
                     padding-left: 0px;
+                    text-align: left;
                 }
             }
             &>p:nth-child(odd) {
@@ -154,8 +156,7 @@ caption {
                     font-size: 1em;
                 }
                 @include media-query($on-palm) {
-                    width: 55%;
-                    text-align: left;
+                    width: 100%;
                 }
             }
         }
