@@ -63,9 +63,6 @@ caption {
 
         margin: 0px auto;
     }
-    @include media-query($on-palm) {
-        border: 1px solid $gray;
-    }
     &:after {
         content: "";
         display: table;
@@ -218,7 +215,8 @@ caption {
         }
     }
     @include media-query($on-palm) {
-        margin: 10px 10px;
+        margin: 10px auto;
+        max-width: 420px;
         padding-bottom: 0px;
     }
 }
