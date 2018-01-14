@@ -65,6 +65,7 @@ caption {
         @include media-query($on-palm) {
             border: 1px solid $gray;
             margin: 3px;
+            position: relative;
         }
     }
     @include media-query($on-laptop) {
@@ -207,7 +208,6 @@ caption {
             }
             @include media-query($on-laptop) {
                 width: 35%;
-                font-size: .8em;
                 word-spacing: 0p;
                 letter-spacing: 0px;
             }
