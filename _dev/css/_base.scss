@@ -69,7 +69,7 @@ caption {
     }
     @include media-query($on-palm) {
         margin: 0px auto;
-        max-width: 420px;
+        max-width: 360px;
         padding-bottom: 0px;
     }
     &:after {
